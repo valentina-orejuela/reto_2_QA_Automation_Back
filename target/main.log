@@ -1,0 +1,27 @@
+19:11:23.339 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+19:11:24.661 request:
+1 > POST https://angular-conduit-node.herokuapp.com/api/users
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 81
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: angular-conduit-node.herokuapp.com
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_333)
+{"user":{"username":"valentina","email":"vaelntina@gmail.com","password":"bbbb"}}
+
+19:11:25.392 response time in milliseconds: 728,99
+1 < 422
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 71
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Fri, 30 Sep 2022 00:11:24 GMT
+1 < Etag: W/"47-6saWFJB14+czND2xZMxVyQ"
+1 < Server: Cowboy
+1 < Vary: X-HTTP-Method-Override
+1 < Via: 1.1 vegur
+1 < X-Powered-By: Express
+{"errors":{"username":"is already taken.","email":"is already taken."}}
+
+19:09:25.086 status code was: 422, expected: 201, response time: 809, url: https://angular-conduit-node.herokuapp.com/api/users, response: {"errors":{"email":"is already taken.","username":"is already taken."}}
+:33.460 status code was: 200, expected: 201, response time: 812, url: https://angular-conduit-node.herokuapp.com/api/users, response: {"user":{"email":"vaelntina@gmail.com","username":"valentina","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMzYzMzQ0Njk1YWU3MDAxNzM0ZjEwMCIsInVzZXJuYW1lIjoidmFsZW50aW5hIiwiZXhwIjoxNjY5NjgwNDUyLCJpYXQiOjE2NjQ0OTY0NTJ9.VDqtXSJIfZ0v0iDLWND3qjdr85KywRaSkj0Q6qFP04M"}}

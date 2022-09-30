@@ -1,0 +1,26 @@
+18:46:54.400 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+18:46:55.887 request:
+1 > POST https://angular-conduit-node.herokuapp.com/api/users
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 67
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: angular-conduit-node.herokuapp.com
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_333)
+{"user":{"username":"string","email":"string","password":"string"}}
+
+18:46:56.673 response time in milliseconds: 783,82
+1 < 422
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 64
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Thu, 29 Sep 2022 23:46:55 GMT
+1 < Etag: W/"40-b0a9Z5/m2qmmXVd59ctB+w"
+1 < Server: Cowboy
+1 < Vary: X-HTTP-Method-Override
+1 < Via: 1.1 vegur
+1 < X-Powered-By: Express
+{"errors":{"email":"is invalid","username":"is already taken."}}
+
+18:46:56.674 status code was: 422, expected: 201, response time: 784, url: https://angular-conduit-node.herokuapp.com/api/users, response: {"errors":{"email":"is invalid","username":"is already taken."}}

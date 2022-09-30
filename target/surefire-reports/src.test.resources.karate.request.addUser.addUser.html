@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.resources.karate.request.addUser.addUser</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">0</div>
+            
+<div class="bg-danger" id="nav-fail">1</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2022-09-29 06:46:56 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item failed">
+<a href="#[1:10]">[1:10] Check the service POST method </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/resources/karate/request/addUser/addUser.feature</span><span class="feature-description">Service client POST | As AQ Automation&#13;
+  I want to add a user&#13;
+  To validate the status code and response</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:10]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:10]</span><span class="scenario-name">Check the service POST method </span>
+</div>
+<div class="scenario-time failed">ms: 2262</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[1:10]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[1:10]bg">
+<div class="step-container" id="1">
+<div class="step-ref bg-step">1</div>
+<div class="step-cell passed">* url "https://angular-conduit-node.herokuapp.com/api"</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="preformatted" data-parent="1">18:46:54.400 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref passed">2</div>
+<div class="step-cell passed">* def requestCreate = read('classpath:karate/request/addUser/requestAddUser.json')</div>
+</div>
+<div class="time-cell passed">74</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">* def responseError = read('classpath:karate/request/addUser/responseAddUser.json')</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref passed">4</div>
+<div class="step-cell passed">Given path 'users'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref passed">5</div>
+<div class="step-cell passed">And request requestCreate</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
+<div class="step-cell passed">When method POST</div>
+</div>
+<div class="time-cell passed">2178</div>
+</div>
+<div class="preformatted" data-parent="6">18:46:55.887 request:
+1 &gt; POST https://angular-conduit-node.herokuapp.com/api/users
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 67
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: angular-conduit-node.herokuapp.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_333)
+{"user":{"username":"string","email":"string","password":"string"}}
+
+18:46:56.673 response time in milliseconds: 783,82
+1 &lt; 422
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 64
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Thu, 29 Sep 2022 23:46:55 GMT
+1 &lt; Etag: W/"40-b0a9Z5/m2qmmXVd59ctB+w"
+1 &lt; Server: Cowboy
+1 &lt; Vary: X-HTTP-Method-Override
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+{"errors":{"email":"is invalid","username":"is already taken."}}</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref failed">7</div>
+<div class="step-cell failed">Then status 201</div>
+</div>
+<div class="time-cell failed">0</div>
+</div>
+<div class="preformatted" data-parent="7">18:46:56.674 status code was: 422, expected: 201, response time: 784, url: https://angular-conduit-node.herokuapp.com/api/users, response: {"errors":{"email":"is invalid","username":"is already taken."}}
+addUser.feature:17 - status code was: 422, expected: 201, response time: 784, url: https://angular-conduit-node.herokuapp.com/api/users, response: {"errors":{"email":"is invalid","username":"is already taken."}}</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+<testsuite failures="1" name="src/test/resources/karate/request/addUser/addUser.feature" skipped="0" tests="1" time="2.262308">
+  <testcase classname="src.test.resources.karate.request.addUser.addUser" name="Check the service POST method" time="2.262308">
+    <failure message="addUser.feature:17 - status code was: 422, expected: 201, response time: 784, url: https://angular-conduit-node.herokuapp.com/api/users, response: {&quot;errors&quot;:{&quot;email&quot;:&quot;is invalid&quot;,&quot;username&quot;:&quot;is already taken.&quot;}}">* url "https://angular-conduit-node.herokuapp.com/api" .................... passed
+* def requestCreate = read('classpath:karate/request/addUser/requestAddUser.json') . passed
+* def responseError = read('classpath:karate/request/addUser/responseAddUser.json') . passed
+Given path 'users' ........................................................ passed
+And request requestCreate ................................................. passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: addUser.feature:17 - status code was: 422, expected: 201, response time: 784, url: https://angular-conduit-node.herokuapp.com/api/users, response: {"errors":{"email":"is invalid","username":"is already taken."}}&#13;
+	at ✽.Then status 201 (addUser.feature:17)</failure>
+  </testcase>
+</testsuite>
